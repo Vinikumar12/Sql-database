@@ -40,3 +40,33 @@ create table Loan(
   foreign key(bookid) references Book(bookid),
   foreign key(memberid) references members(memberid)
 );
+/* Explanation:
+I designed a Library Management System using MySQL Workbench to efficiently manage books, authors, members, and loans. 
+The database is structured with normalization principles to reduce redundancy and improve data integrity.
+Key Tables and Relationships:
+Book: Stores book details like title and publish year.
+
+Author: Contains author information.
+
+BookAuthor: Manages many-to-many relationships between books and authors.
+
+Members: Holds member data including name and email.
+
+Loan: Tracks book loans with issue, due, and return dates.
+
+Category: Defines book categories
+Primary Keys ensure unique identification of records.
+
+Foreign Keys establish relationships between tables (e.g., Book–Author, Book–Loan).
+
+NOT NULL constraints enforce mandatory fields like book title and member name.
+
+Normalization eliminates data duplication and simplifies data insertion and retrieval.
+Purpose:
+This schema allows clients to:
+
+Retrieve books by category
+
+Track which member borrowed which book
+
+Maintain clean, organized, and scalable data
