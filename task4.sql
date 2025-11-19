@@ -1,3 +1,5 @@
+/* using the aggregate functions*/
+use batch61;
 CREATE TABLE employees (
     emp_id INT PRIMARY KEY,
     emp_name VARCHAR(100),
@@ -41,3 +43,14 @@ SELECT department_id,
        AVG(salary) AS avg_salary
 FROM employees
 GROUP BY department_id;
+/*Explanation:
+--In this task, I created an employees table with sample records representing different departments and job roles. Using this dataset,
+we applied aggregate functions such as SUM, COUNT, and AVG along with GROUP BY to categorize employees by department and summarize their salaries. 
+--The SUM(salary) query calculates the total salary expenditure per department, COUNT(*) shows the number of employees in each department, 
+and AVG(salary) provides the average salary.
+--We used HAVING to filter groups based on aggregate conditions, for example identifying departments whose total salary exceeds 70,000. 
+--The COUNT(DISTINCT job_title) query highlights the number of unique job roles in each department. 
+--Finally, by combining multiple aggregates in a single query, we produced a comprehensive summary showing employee count, total salary, and average salary per department.
+*/
+
+
