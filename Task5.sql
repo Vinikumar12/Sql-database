@@ -15,9 +15,9 @@ CREATE TABLE Orders (
 );
 
 INSERT INTO Customers (CustomerID, Name, Email, City) VALUES
-(1, 'Alice', 'alice@example.com', 'Hyderabad'),
-(2, 'Bob', 'bob@example.com', 'Delhi'),
-(3, 'Charlie', 'charlie@example.com', 'Mumbai');
+(1, 'Ajay', 'ajay@example.com', 'Hyderabad'),
+(2, 'Bobby', 'bobby@example.com', 'Delhi'),
+(3, 'Chand', 'chand@example.com', 'Mumbai');
 
 INSERT INTO Orders (OrderID, CustomerID, OrderDate, Amount) VALUES
 (101, 1, '2025-11-01', 2500.00),
@@ -40,3 +40,4 @@ RIGHT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
 SELECT Customers.CustomerID, Customers.Name, Orders.OrderID
 FROM Customers
 FULL OUTER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+
